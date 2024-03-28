@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const cors = require('cors');
 
 const Employee = require('./models/employeeModel')
-// const Product = require('./models/productModel')
 
 const app = express()
 
@@ -12,7 +11,6 @@ app.use(express.urlencoded({extended: false}))
 
 app.use(cors());
 
-//routes
 
 app.get('/', (req, res) => {
     res.send('Hello NODE API')
