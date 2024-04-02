@@ -1,12 +1,13 @@
 {
-  "name": "node-api",
+  "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project is created to teach you how to create a Restful CRUD API with Node.js, Express and MongoDB.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darshan103/Node-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/darshan103/Node-API/issues"
+  },
+  "homepage": "https://github.com/darshan103/Node-API#readme"
 }

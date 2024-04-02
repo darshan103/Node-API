@@ -86,8 +86,9 @@ app.delete('/employees/:id', async(req, res) =>{
 
 mongoose.set("strictQuery", false)
 mongoose
-// .connect('mongodb+srv://SkumarApi:MTjzeiYtyCRTBBy4@cluster0.h4btpip.mongodb.net/Node-API?retryWrites=true&w=majority&appName=Cluster0')
-.connect('mongodb://localhost:27017/Node-API', { useNewUrlParser: true, useUnifiedTopology: true })
+
+// .connect('mongodb://localhost:27017/Node-API', { useNewUrlParser: true, useUnifiedTopology: true })
+.connect('mongodb+srv://singhdarshan2166:Darshan123@cluster0.ktikisk.mongodb.net/NodeEmployee?retryWrites=true&w=majority&appName=Cluster0')
 
 .then(() => {
     console.log('connected to MongoDB')
