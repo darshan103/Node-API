@@ -1,10 +1,14 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors');
-
+const bodyParser = require('body-parser')
 const Employee = require('./models/employeeModel')
 
 const app = express()
+
+app.use(bodyParser.json({ limit: '50mb' })); // Increase payload size limit for JSON payloads
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true })); // Increase payload size limit for URL-encoded payloads
+
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
@@ -88,7 +92,10 @@ mongoose.set("strictQuery", false)
 mongoose
 
 // .connect('mongodb://localhost:27017/Node-API', { useNewUrlParser: true, useUnifiedTopology: true })
-.connect('mongodb+srv://singhdarshan2166:Darshan123@cluster0.ktikisk.mongodb.net/NodeEmployee?retryWrites=true&w=majority&appName=Cluster0')
+.connect('mongodb+srv://singhdarshan2166:Darshan123@cluster0.ktikisk.mongodb.net/NodeEmployee?retryWrites=true&w=majority&appName=Cluster0', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
 
 .then(() => {
     console.log('connected to MongoDB')
